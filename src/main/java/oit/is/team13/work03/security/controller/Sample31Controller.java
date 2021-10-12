@@ -25,5 +25,19 @@ public class Sample31Controller {
     model.addAttribute("login_user", loginUser);
     return "sample31.html";
   }
-
+  @GetMapping("step3")
+  public String sample33(){
+    return "sample33.html";
+  }
+  @PostMapping("step6")
+  public String sample36(@RequestParam Integer hiku1, @RequestParam Integer hiku2, ModelMap model){
+    int hikukekka;
+    hikukekka = hiku1-hiku2;
+    model.addAttribute("hikukekka", hikukekka);
+    return "sample33.html";
+  }
+  @GetMapping("step7")
+  public String sample37(){
+    return "sample37.html";
+  }
 }
